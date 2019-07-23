@@ -1,46 +1,50 @@
 ---
 layout: cheat-sheet
 redirect_to: false
-title: GitHub Git Spiekbriefje
-byline: Git is de open source versiecontrole systeem. Dit spiekbriefje vat de Git-opdrachtregelinstructies samen, veel plezier!
+title: GitHub Git Spickzettel
+byline: Git ist das verteilte Open Source Versionskontrollsystem, dass die GitHub-Aktivitäten auf deinem Laptop oder PC möglich macht. Dieser Spickzettel fasst die gebräuchlichsten Git-Kommandozeilenbefehle zum schnellen Nachschlagen zusammen.
 leadingpath: ../../../
 ---
 
 {% capture colOne %}
 ## Git installieren
-GitHub biedt desktop-clients met een grafische gebruikersinterface voor de meest voorkomende acties op repositories, evenals een automatisch bijgewerkte command prompt van Git voor geavanceerde scenario's.
-### GitHub voor Windows
+GitHub bietet Desktop-Clients an, die ein grafisches Benutzerinterface für die häufigsten Aktionen auf Repositories beinhalten, sowie eine automatisch aktualisierte Kommandozeilen-Version von Git für erweiterte Szenarien.
+
+### GitHub für Windows
 http://windows.github.com
 
-### GitHub voor Mac
+### GitHub für Mac
 http://mac.github.com
 
 Git-Distributionen für Linux- und POSIX-Systeme sind auf der offiziellen Git SCM-Webseite verfügbar.
 
-### Git voor alle andere Plattformen
+### Git für alle Plattformen
 http://git-scm.com
 
-## Tool configureren
-Configuratie van gebruikersinformatie voor alle lokale repositories
+## Werkzeuge konfigurieren
+Konfigurieren von Benutzerinformationen für alle lokalen Repositories
 
 ```$ git config --global user.name "[name]"```
 
-Stelt de naam in die u wilt toevoegen aan uw commits
+Setzt den Namen, den du an deine Commit-Transaktionen hängen willst
+
 
 ```$ git config --global user.email "[email address]"```
 
-Stel het e-mailadres in dat u wilt toevoegen aan uw commits
+Setzt die Emailadresse, die du an deine Commit-Transaktionen hängen willst
+
 
 ## Repositories anlegen
-Maak een nieuwe repository of download een van een bestaande URL
+Ein neues Repository anlegen, oder eines von einer bestehenden URL herunterladen
+
 
 ```$ git init [project-name]```
 
-Maak een nieuwe lokale repository met een gedefinieerde naam
+Legt ein neues lokales Repository mit dem angegebenen Namen an
 
 ```$ git clone [url]```
 
-Dupliceert een project en laadt de versiegeschiedenis in.
+Klont ein Projekt und lädt seine gesamte Versionshistorie herunter
 
 {% endcapture %}
 <div class="col-md-6">
@@ -50,56 +54,59 @@ Dupliceert een project en laadt de versiegeschiedenis in.
 
 {% capture colTwo %}
 
-## Veranderingen voorbereiden
-Veranderingen controleren en een commit in concept voorbereiden
+## Änderungen vornehmen
+Änderungen überprüfen und eine Commit-Transaktion anfertigen
 
 ```$ git status```
 
-Verzamel alle veranderingen nieuwe en veranderde data voor een commit.
+Listet alle zum Commit bereiten neuen oder geänderten Dateien auf
 
 ```$ git diff```
 
-Laat zien welke verschillen tussen work space en staging area.
+Zeigt noch nicht indizierte Dateiänderungen an
+
 
 ```$ git add [file]```
 
-Voeg een bestand toe aan je staging area.
+Indiziert den derzeitigen Stand der Datei für die Versionierung
 
 ```$ git diff --staged```
 
-Laat zien welke verschillen er zijn tussen de staging area en de repo.
+Zeigt die Unterschiede zwischen dem Index ("staging area") und der aktuellen Dateiversion
 
 ```$ git reset [file]```
 
-Unstage een bestand met behoud van de wijzigingen in de work space.
+Nimmt die Datei vom Index, erhält jedoch ihren Inhalt
+
 
 ```$ git commit -m"[descriptive message]"```
 
-Commit je staged inhoud als een nieuwe commit snapshot.
+Nimmt alle derzeit indizierten Dateien permanent in die Versionshistorie auf
 
-## Branch & Merge
-Werk in branches isoleren, context veranderen en veranderingen integreren.
+## Änderungen gruppieren
+Benennen von Commit-Serien und Zusammenfassen erledigter Tasks
 
 ```$ git branch```
 
-Toon alle branches. Aan het sterretje (*) zie je welke branch actief is.
+Listet alle lokalen Branches im aktuellen Repository auf
 
 ```$ git branch [branch-name]```
 
-Maak een nieuwe branch
+Erzeugt einen neuen Branch
+
 
 ```$ git checkout [branch-name]```
 
-Verander van branch en open de work space.
+Wechselt auf den angegebenen Branch und aktualisiert das Arbeitsverzeichnis
 
 ```$ git merge [branch-name]```
 
-Mergde een specifieke branch geschiedenis in de huidige branch.
+Fasst die Historie des angegeben Branches mit der des aktuell ausgecheckten Branches zusammen
 
 
 ```$ git branch -d [branch-name]```
 
-Verwijder een branch
+Löscht den angegebenen Branch
 {% endcapture %}
 <div class="col-md-6">
 {{ colTwo | markdownify }}
@@ -107,25 +114,26 @@ Verwijder een branch
 <div class="clearfix"></div>
 
 {% capture colThree %}
-## Refactor namen
-Verwijder en verplaats bestnaden.
+## Dateinamen refaktorisieren
+Verschieben und Löschen versionierter Dateien
+
 
 ```$ git rm [file]```
 
-Verwijder het bestand en indexeert deze verwijdering.
+Löscht die Datei aus dem Arbeitsverzeichnis und indiziert diese Löschung
+
 
 ```$ git rm --cached [file]```
 
 Entfernt die Datei aus der Versionskontrolle, behält sie jedoch lokal
-Verwijder het bestand uit de versiecontrole, maar behoudt het in de lokale workspace.
+
 
 ```$ git mv [file-original] [file-renamed]```
 
 Ändert den Namen der Datei und bereitet diese für den Commit vor
-Verander de naam van het bestand en bereidt deze voor om te comitten.
 
-## Tracking tijdelijk uitschakelen
-Tijdelijk bestanden en adressen van uitsluiten
+## Tracking unterdrücken
+Temporäre Dateien und Pfade ausschließen
 
 ```
 *.log
