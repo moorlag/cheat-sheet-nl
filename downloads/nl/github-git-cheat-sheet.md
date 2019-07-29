@@ -7,7 +7,7 @@ leadingpath: ../../../
 ---
 
 {% capture colOne %}
-## Git installieren
+## Git installeren
 GitHub biedt desktop-clients met een grafische gebruikersinterface voor de meest voorkomende acties op repositories, evenals een automatisch bijgewerkte command prompt van Git voor geavanceerde scenario's.
 ### GitHub voor Windows
 http://windows.github.com
@@ -17,7 +17,7 @@ http://mac.github.com
 
 Git-Distributionen für Linux- und POSIX-Systeme sind auf der offiziellen Git SCM-Webseite verfügbar.
 
-### Git voor alle andere Plattformen
+### Git voor alle andere Platformen
 http://git-scm.com
 
 ## Tool configureren
