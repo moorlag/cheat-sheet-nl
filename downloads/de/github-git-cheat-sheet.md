@@ -210,21 +210,19 @@ Registrieren eines externen Repositories (URL) und Tauschen der Repository-Histo
 
 ```$ git fetch [remote]```
 
-Lädt die gesamte Historie eines externen Repositories herunter
-
+Downloadt de totale geschiedenis van een externe repository
 
 ```$ git merge [remote]/[branch]```
 
-Integriert den externen Branch in den aktuell lokal ausgecheckten Branch
-
+Intergreert de externe branch in de actuele lokale branch.
 
 ```$ git push [remote] [branch]```
 
-Pusht alle Commits auf dem lokalen Branch zu GitHub
-
+Push alle commits van de lokale branch naar GitHub.
 
 ```$ git pull```
 
+Pullt de geschiedenis van een externe repository en combineert de veranderingen.
 Pullt die Historie vom externen Repository und integriert die Änderungen
 {% endcapture %}
 <div class="col-md-6">
